@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Lexend+Giga:wght@100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Lusitana:wght@400;700&display=swap');
+
+:root {
+        /*======COULEURS=======*/
+    --color-primary: #6A994E;
+    --color-secondary: #A7C957;
+    --color-bg: #F2E8CF;
+    --color-text: #1A2E1A;
+    --color-text-light: #386641;
+    
+    
+    /*======ESPACEMENTS======*/
+    --space-1: 8px;
+    --space-2: 10px;
+    --space-3: 16px;
+    --space-4: 20px;
+    --space-5: 24px;
+    --space-6: 40px;
+    --space-7: 60px;
+    --space-8: 170px;
+
+    /*=========TYPOGRAPHIE==========*/
+    --font-size-sml: 16px;
+    --font-size-med: 20px;
+    --font-size-med2: 22px;
+    --font-size-lar: 40px;
+
+    /*=========*/
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg, #F2E8CF);
+    font-family: "Libre Baskerville";
+    box-sizing: border-box;
+}
+
+/**
+* Navbar - Barre de navigation
+*
+* Utilisation :
+* <nav class="navbar">
+*   <div class="navbar__logo">...</div>
+*   <div class="navbar__titre>...</div>
+*   <div class="navbar__element"> <a></a> </div>
+*   <div class="navbar__boutton">...</div>
+* </nav>
+*
+* Éléments :
+* navbar__element : Éléments sur la barre de navigation
+* navbar__logo : Boîte du logo du site
+* navbar__icon : Icon du site
+* navbar__titre : Titre principale du site (Action PLANète B)
+* navbar__boutton : Boutton à droite pour contacter les responsables
+* 
+**/
+
+.navbar {
+    display: flex;
+    padding: 10px 60px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background: var(--color-text-light, #386641);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.navbar__element {
+    color: #FFF; 
+    font-size: 16px;
+    font-weight: 400; 
+    line-height: 22px;
+    list-style: none;
+    font-size: var(--font-size-sml);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-5);
+    font-weight: bold;
+}
+
+.navbar__element a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.navbar__logo { 
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;  
+    
+} 
+
+.navbar__icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 0 8px;
+    background: var(--color-secondary, #A7C957);
+    color: var(----color-bg, #F2E8CF);
+    text-shadow: 0 2px 3.6px #386641;
+    font-size: var(--font-size-lar);
+    font-style: normal;
+    font-weight: 700;
+}
+
+.navbar__titre {
+    color: var(--color-secondary, #A7C957);
+    font-size: var(--font-size-med2);
+}
+
+.navbar__boutton {
+    display: flex;
+    padding: 10px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--color-secondary, #A7C957);
+    color: var(----color-text, #1A2E1A);
+}
+
+
+/**
+* Hero - Hero du site et accueil
+*
+* Utilisation : 
+* <header class="hero" id="accueil">
+*   <div class="hero__conteneur">
+*       <h1 class="hero__titre">...</h1>
+*       <p class="hero__desc">...</p>
+*       <div class="hero__boutton_liste">
+*           <div class="hero__boutton--transparent">...</div>
+*           <div class="hero__boutton">...</div>
+*       </div>
+*   </div>
+*   <img class="hero__image" ...>
+* </header>
+*  
+* Éléments :
+* hero__conteneur : Container de la partie gauche du hero 
+* hero__titre : Titre du hero
+* hero__desc : Petite description du mouvement
+* hero__boutton_liste : Placement des deux bouttons en-bas de la description
+* hero__boutton : Boutton vert pour naviguer 
+* hero__image : Image à droite du hero
+*
+* Variante :
+* hero__boutton--transparent : Boutton de navigation mais transparent
+**/
+.hero {
+    display: flex;
+    height: 700px;
+    padding: var(--space-7);
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.83) 0.11%);
+    
+}
+
+.hero__conteneur {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+    flex: 1 0 0;
+}
+
+.hero__titre {
+    align-self: stretch;
+    color: var(--color-bg);
+    font-size: var(--font-size-lar);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 48px;
+    
+}
+
+.hero__desc {
+    align-self: stretch;
+    color: var(--color-primary);
+    font-size: var(--font-size-med2);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.hero__boutton_liste {
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+    
+}
+
+.hero__boutton {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--space-1);
+    background: var(--color-text-light);
+    color: white;
+    font-size: var(--font-size-sml);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.hero__boutton--transparent {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--space-1);
+    border: 1px solid var(--color-bg);
+    color: white;
+    font-size: var(--font-size-sml);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.hero__image {
+    display: flex;
+    width: 630px;
+    height: 400px;
+}
+
+/**
+* Conteneur : Contient les grandes parties du site
+*
+* Utilisation : 
+* <section class="conteneur"> ... </section>
+*
+* Variante : 
+* conteneur--vert : Un conteneur vert
+**/
+
+
+.conteneur {
+    padding: var(--space-7) var(--space-8);
+}
+
+
+.conteneur--vert {
+    padding: var(--space-7) var(--space-8);
+    background-color: var(--color-text-light);
+}
+
+/**
+* Contenu : Présentation du sujet des grandes parties du site
+*
+* Utilisation : 
+*<div class="contenu__intro">
+*    <h1 class="contenu__titre">...</h1>
+*    <p class="contenu__texte">...</p>
+*</div>
+*
+* Éléments : 
+* contenu__intro : Boîte pour les informations descriptives d'une section
+* contenu__titre : Titre de la section
+* contenu__texte : Texte descriptif de la section
+*
+* Variable
+* contenu__titre--alt : Titre avec une autre couleur
+**/
+
+.contenu--vertical {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-7);
+    align-items: center;
+    
+}
+
+.contenu--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-7);
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    
+}
+
+.contenu__intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    align-items: center;
+    
+}
+
+.contenu__titre {
+    color: var(--color-text-light);
+    text-align: center;
+    font-size: var(--font-size-lar);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+.contenu__titre--alt {
+    color: var(--color-bg);
+    text-align: center;
+    font-size: var(--font-size-lar);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+
+}
+
+.contenu__texte {
+    color: var(--color-text);
+    text-align: center;
+    font-size: var(--space-3);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.liste {
+    display: flex;
+    padding: var(--space-4) 0;
+    gap: var(--space-6);
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.liste_activite {
+    display: flex;
+    flex-direction: column; 
+}
+
+/**
+* Carte : Carte pour informer le lecteur de l'organisation
+*
+* Utilisation :
+*<div class="carte">
+*    <div class="carte__image">
+*        <img src="">
+*    </div>
+*    <div class="carte__texte">
+*        <h2 class="carte__texte--titre">...</h2>
+*        <p class="carte__texte--main">...</p>
+*        <div class="carte__bot">
+*            <div class="carte__bot--avatar"></div>
+*           <p class="carte__texte--main">...</p>
+*        </div>
+*    </div>
+*</div>
+* Éléments : 
+* carte__image : Image pour décorer la carte
+* carte__texte : Texte pour la carte
+* carte__bot : Signature avec un icône
+*
+* Variante :
+* carte__texte--titre : Titre de la carte
+* carte__texte--titrealt : Titre de la carte avec une couleur alternée
+* carte__texte--main : Texte qui explique le titre de la carte
+* carte__bot--avatar : Icône à côté de la signature
+**/
+
+.carte {
+    display: flex;
+    padding: var(--space-3);
+    gap: var(--space-3);
+    flex: 1;
+    border-radius: 6px;
+    background: var(--color-secondary);
+    align-self: flex-start;
+    
+}
+
+.carte__image {
+    display: flex;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: rgba(217, 217, 217, 0.50);
+    
+}
+
+.carte__texte {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+    flex: 1;
+}
+
+.carte__texte--titre{
+    color: var(--color-text-light);
+    font-size: var(--font-size-med);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.carte__texte--titrealt {
+    color: var(--color-text);
+    font-size: var(--font-size-med);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.carte__texte--main {
+    color: var(--color-text);
+    font-size: var(--font-size-sml);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.carte__bot {
+    display: flex;
+    padding: 4px 0;
+    align-items: center;
+    gap: var(--space-1);
+    align-self: stretch;
+}
+
+.carte__bot--avatar {
+    width: var(--space-4);
+    height: var(--space-4);
+    border-radius: var(--space-4);
+    background: rgba(0, 0, 0, 0.10);
+}
+
+/**
+* Carte_activite : Carte pour lister les activités de l'organisation
+*
+* Utilisation :
+* <div class="liste_activite">
+*    <div class="carte_activite">
+*      <div class="carte_activite_image"> </div>             
+*     <div class="carte_activite__texte">...</div>
+*     <div class="carte_activite__date">...</div>
+*    </div>
+* </div>
+*
+* Éléments : 
+* carte_activite__image : Petite image à côté de la description de l'activité
+* carte_activite__texte : Texte pour décrire l'activité
+* carte_activite__date : Texte pour écrire la date de l'activité
+* Variante
+*
+**/
+
+.carte_activite {
+    display: flex;
+    padding: var(--space-4) 0;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-3);
+    flex: 1 0 0;
+    align-self: stretch;
+    border-bottom: 1px solid ;
+    border-color: var(--color-primary); 
+}
+
+.carte_activite__image {
+    display: flex;
+    width: var(--space-7);
+
+}
+
+.carte_activite__texte {
+    color: var(--color-text-light);
+    font-size: var(--font-size-med);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.carte_activite__date {
+    color: var(--color-primary);
+    text-align: right;
+    font-size: var(--font-size-med);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/**
+* Carte_temoignage : Carte pour informer le lecteur sur les témoignages
+*
+* Utilisation : 
+*<div class="carte_temoignage">
+*     <div class="carte_temoignage__profil">
+*        <div class="carte_temoignage__avatar">
+*            <img src="">
+*        </div>
+*        <p class="carte_temoignage__nom">...</p>
+*     </div>
+*     <p class="carte_temoignage__texte">...</p>
+*</div>
+*
+* Éléments : 
+* carte_temoignage__profil : Section avec l'avatar et le nom du témoin
+* carte_temoignage__avatar : Avatar du témoin sur la carte
+* carte_temoignage__nom : Nom du témoin sur la carte
+* carte_temoignage__texte : Commentaire laissé par le témoin
+**/
+
+.carte_temoignage {
+    display: flex;
+    padding: var(--space-3);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    border-radius: 6px;
+    background: var(--color-secondary);
+    flex: 1 0 0;
+} 
+
+.carte_temoignage__profil {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    flex: 1 0 0;
+}
+
+.carte_temoignage__avatar {
+    display: flex;
+    width: var(--space-7);
+    height: var(--space-7);
+    padding: 9px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carte_temoignage__nom {
+    color: black;
+    font-size: var(--font-size-sml);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.carte_temoignage__texte {
+    color: black;
+    font-size: var(--font-size-sml);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/**
+* Liste_contact : Liste d'information à inscrire pour la section contact
+*
+* Utilisation : 
+*<div class="liste_contact">
+*    <div class="liste_contact__info">
+*         <div class="liste_contact__sujet">
+*     </div>
+*</div>
+*
+* Éléments : 
+* liste_contact__info : Liste les informations à rentrer
+* liste_contact__sujet : Boîte avec les informations et les textboxs
+*
+**/
+
+.liste_contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-6);
+    align-self: stretch;
+}
+
+.liste_contact__info {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 80px;
+  
+}
+
+.liste_contact__sujet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+/**
+* Contact : Textbox pour entrer des informations
+*
+* Utilisation : 
+* <p class="contact__identifiant">...</p>
+* <div class="contact__textbox">...</div>
+*
+* Éléments : 
+* contact__identifiant : Titre pour identifier le sujet du textbox
+* contact__textbox : Textbox pour rentrer ses informations
+**/
+
+.contact__identifiant {
+    align-self: stretch;
+    color: var(--color-text);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.contact__textbox {
+    display: flex;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: white;
+    color: var(--color-primary);
+}
+
+.boutton_envoyer {
+    display: flex;
+    width: 240px;
+    padding: 12px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--space-1);
+    background: var(--color-text-light);
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: var(--font-size-sml);
+}
+
+
+/**
+* Pdp : Pied de page du site
+*
+* Utilisation : 
+*<footer class="pdp">
+*    <div class="pdp__liste">
+*        <p class="pdp__element">...</p>
+*    </div>
+*    <div class="pdp__boutton">...</div>
+*</footer>
+*
+* Éléments : 
+* pdp__boutton : Boutton qui mène à une autre page
+* pdp__liste : Liste de liens pour naviguer
+* pdp__element : Les liens de la liste
+*
+*
+**/
+
+.pdp {
+    display: flex;
+    padding: var(--space-7);
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-5);
+    align-self: stretch;
+    background: var(--color-text-light);
+}
+
+.pdp__boutton {
+    display: flex;
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.pdp__liste {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-direction: row;
+}
+
+.pdp__element {
+    color: var(--color-secondary);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    
+}
+
+

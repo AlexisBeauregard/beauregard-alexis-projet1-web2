@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 2</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+
+<!--Barre de navigation de la page (fixe)-->
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <div class="navbar__icon">B</div>
+            <div class="navbar__titre">Action PLANète B</div>
+        </div>
+        <div class="navbar__element">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="#service">Nos services</a>
+            <a href="#activite">Activités</a>
+            <a href="#temoignage">Témoignages</a>
+            <a href="#contact">Nous joindre</a>
+        </div>
+        <div class="navbar__boutton">Engagez-vous avec nous</div>
+    </nav>
+
+<!--Hero et accueil du site-->
+    <header class="hero" id="accueil">
+        <div class="hero__conteneur">
+            <h1 class="hero__titre">Rejoignez notre lutte pour la planète 🌱</h1>
+            <p class="hero__desc">Ensemble, nous pouvons faire la différence.</p>
+            <div class="hero__boutton_liste">
+                <div class="hero__boutton--transparent">En savoir plus</div>
+                <div class="hero__boutton">Agir maintenant</div>
+            </div>
+        </div>
+        <img class="hero__image" src="/img/img-hero.jpg">
+    </header>
+
+<!--Section à propos-->
+    <section class="conteneur" id="apropos">
+        <div class="contenu--vertical">
+            <div class="contenu__intro">
+                <h1 class="contenu__titre">À propos</h1>
+                <p class="contenu__texte">Nous sommes une ONG dédiée à la protection de notre environnement. Notre mission est de sensibiliser et d'agir pour un monde plus durable.</p>
+            </div>
+            <div class="liste">
+                <div class="carte">
+                    <div class="carte__image">
+                        <img src="/img/emoji_nature.svg">
+                    </div>
+                    <div class="carte__texte">
+                        <h2 class="carte__texte--titre">Notre Mission</h2>
+                        <p class="carte__texte--main">Nous croyons en une approche collaborative pour préserver les ressources de la planète.</p>
+                        <div class="carte__bot">
+                            <div class="carte__bot--avatar"></div>
+                            <p class="carte__texte--main">Équipe ONG</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carte">
+                    <div class="carte__image">
+                        <img src="/img/grass.svg">
+                    </div>
+                    <div class="carte__texte">
+                        <h2 class="carte__texte--titre">Notre Vision</h2>
+                        <p class="carte__texte--main">Unir les communautés pour un avenir écologique.</p>
+                        <div class="carte__bot">
+                            <div class="carte__bot--avatar"></div>
+                            <p class="carte__texte--main">Équipe ONG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Section des services-->
+    <section class="conteneur--vert" id="service">
+        <div class="contenu--vertical">
+            <h1 class="contenu__titre--alt">Services</h1>
+        </div>
+        <div class="liste">
+            <div class="carte">
+                <div class="carte__image">
+                    <img src="/img/set_meal.svg">
+                </div>
+                <div class="carte__texte">
+                    <h2 class="carte__texte--titrealt">Éducation</h2>
+                    <div class="carte__texte--main">Sensibilisation à l'environnement et ateliers collectifs.</div>
+                </div>
+            </div>
+            <div class="carte">
+                <div class="carte__image">
+                    <img src="/img/image.svg">
+                </div>
+                <div class="carte__texte">
+                    <h2 class="carte__texte--titrealt">Projets</h2>
+                    <div class="carte__texte--main">Mise en œuvre de projets écologiques.</div>
+                </div>
+            </div>
+            <div class="carte">
+                <div class="carte__image">
+                    
+                </div>
+                <div class="carte__texte">
+                    <h2 class="carte__texte--titrealt">Coopération</h2>
+                    <div class="carte__texte--main">Collaboration avec d'autres ONG et communautés.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--Section des activités-->
+    <section class="conteneur" id="activite">
+        <div class="contenu--horizontal">
+            <div class="contenu__intro">
+                <h1 class="contenu__titre">Liste des activités</h1>
+                <div class="contenu__texte">Découvrez nos activités mensuelles.</div>
+            </div>
+            <div class="liste_activite">
+                 <div class="carte_activite">
+                    <div class="carte_activite_image">
+                        🌱
+                    </div>
+                    <div class="carte_activite__texte">Atelier de jardinage</div>
+                    <div class="carte_activite__date">15 Mars</div>
+                 </div>
+                 <div class="carte_activite">
+                    <div class="carte_activite_image">
+                        🌎
+                    </div>
+                    <div class="carte_activite__texte">Journée mondiale de l'eau</div>
+                    <div class="carte_activite__date">22 Mars</div>
+                 </div>
+                 <div class="carte_activite">
+                    <div class="carte_activite_image">
+                        🌳
+                    </div>
+                    <div class="carte_activite__texte">Plantation d'arbres</div>
+                    <div class="carte_activite__date">05 Avril</div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+<!--Section des témoignages-->
+    <section class="conteneur--vert" id="temoignage">
+        <div class="contenu--horizontal">
+            <div class="liste">
+                <div class="carte_temoignage">
+                     <div class="carte_temoignage__profil">
+                        <div class="carte_temoignage__avatar">
+                            <img src="/img/avatar.svg">
+                        </div>
+                        <p class="carte_temoignage__nom">Anne</p>
+                     </div>
+                     <p class="carte_temoignage__texte">Cette ONG change vraiment les choses.</p>
+                </div>
+                <div class="carte_temoignage">
+                    <div class="carte_temoignage__profil">
+                        <div class="carte_temoignage__avatar">
+                            <img src="/img/avatar.svg">
+                        </div>
+                        <p class="carte_temoignage__nom">Pierre</p>
+                    </div>
+                    <p class="carte_temoignage__texte">Je suis fier de contribuer à cette cause.</p>
+                </div>
+                <div class="carte_temoignage">
+                    <div class="carte_temoignage__profil">
+                        <div class="carte_temoignage__avatar">
+                            <img src="/img/avatar.svg">
+                        </div>
+                        <p class="carte_temoignage__nom">George</p>
+                    </div>
+                    <p class="carte_temoignage__texte">On a besoin de s’activer collectivement pour sauver la planète!</p>
+                </div>
+            </div>
+            <h1 class="contenu__titre--alt">Témoignages</h1>
+        </div>
+    </section>
+
+<!--Section de contact-->
+    <section class="conteneur" id="contact">
+        <div class="contenu--vertical">
+            <h1 class="contenu__titre">Contactez-nous</h1>
+            <div class="liste_contact">
+                <div class="liste_contact__info">
+                    <div class="liste_contact__sujet">
+                        <p class="contact__identifiant">Nom</p>
+                        <input type="text" class="contact__textbox" placeholder="Entrez votre nom">
+                    </div>
+                    <div class="liste_contact__sujet">
+                        <p class="contact__identifiant">Email</p>
+                        <input type="text" class="contact__textbox" placeholder="Entrez votre email">
+                    </div>
+                    <div class="liste_contact__sujet">
+                        <p class="contact__identifiant">Message</p>
+                        <input type="text" class="contact__textbox" placeholder="Votre message">
+                    </div>
+                </div>
+                <div class="boutton_envoyer">Envoyer</div>
+            </div>
+        </div>
+    </section>
+
+<!--Pied de la page-->
+    <footer class="pdp">
+        <div class="pdp__liste">
+            <p class="pdp__element">Liens rapides</p>
+            <p class="pdp__element">|</p>
+            <p class="pdp__element">À propos de nous</p>
+            <p class="pdp__element">|</p>
+            <p class="pdp__element">Nous contacter</p>
+            <p class="pdp__element">|</p>
+            <p class="pdp__element">Suivez-nous sur les réseaux sociaux</p>
+        </div>
+        <div class="pdp__boutton">Engagez-vous avec nous</div>
+    </footer>
+
+</body>
+
+</html>
